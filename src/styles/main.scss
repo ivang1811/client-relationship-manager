@@ -1,0 +1,46 @@
+@import "./variables";
+@import "./header";
+@import "./cards";
+@import "./client";
+@import "./manager";
+@import "./form";
+body {
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page-wrapper {
+  min-height: 96vh;
+}
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  user-select: none;
+  margin-bottom: 1.5rem;
+}
+footer {
+  user-select: none;
+  font-weight: 400;
+  height: 4vh;
+  width: 99vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #1f9784;
+}
+body::-webkit-scrollbar-corner {
+  background: #ffffff;
+}

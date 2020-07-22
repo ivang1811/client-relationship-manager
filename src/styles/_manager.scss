@@ -1,0 +1,242 @@
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+}
+#clientForm {
+  position: absolute;
+  background-color: #f4f5f7;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 50rem;
+  height: 55rem;
+  z-index: 100;
+  border-radius: 4px;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  display: none;
+  .clientForm__header {
+    margin: 1rem 1rem 1rem 1rem;
+    @include flexDirection(row);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  i {
+    cursor: pointer;
+  }
+  form {
+    margin: 0 3rem 0 3rem;
+    text-align: left;
+  }
+  form input {
+    width: 100%;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 1rem 0;
+  }
+  form textarea {
+    width: 100%;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 1rem 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 25rem;
+  }
+  .formSubmit {
+    background: #26b7a0;
+    margin-top: 1rem;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    &:focus {
+      outline: none;
+      background-color: #1f9784;
+    }
+    &:hover {
+      outline: none;
+      background-color: #1f9784;
+    }
+  }
+  label {
+    font-weight: 500;
+  }
+}
+#editForm {
+  position: absolute;
+  background-color: #f4f5f7;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 50rem;
+  height: 55rem;
+  z-index: 100;
+  border-radius: 4px;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  display: none;
+  .clientForm__header {
+    margin: 1rem 1rem 1rem 1rem;
+    @include flexDirection(row);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  i {
+    cursor: pointer;
+  }
+  form {
+    margin: 0 3rem 0 3rem;
+    text-align: left;
+  }
+  form input {
+    width: 100%;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 1rem 0;
+  }
+  form textarea {
+    width: 100%;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 1rem 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 25rem;
+  }
+  .formSubmit {
+    background: #26b7a0;
+    margin-top: 1rem;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    &:focus {
+      outline: none;
+      background-color: #1f9784;
+    }
+    &:hover {
+      outline: none;
+      background-color: #1f9784;
+    }
+  }
+  label {
+    font-weight: 500;
+  }
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+.subnav {
+  @include flexDirection(row);
+}
+#search-bar {
+  position: relative;
+  width: 80%;
+  float: left;
+  height: 3rem;
+  padding-left: 15rem;
+}
+.AddNewClient {
+  position: relative;
+  width: 20%;
+  float: right;
+  height: 3rem;
+
+  button {
+    background: #26b7a0;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      outline: none;
+      background-color: #1f9784;
+    }
+  }
+}
+/* Search bar */
+
+#search-bar {
+  @include flexDirection(row);
+}
+#search-results {
+  display: none;
+}
+#search-type {
+  height: 3rem;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 1rem;
+  color: #26273d;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 100;
+  z-index: inherit;
+  width: 20rem;
+}
+#type {
+  height: 3rem;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 1rem;
+  color: #26273d;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 100;
+  z-index: inherit;
+  width: 20rem;
+  margin-left: 5rem;
+}

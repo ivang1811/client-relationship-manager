@@ -3,8 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
+  <body>
+    <section id="clientForm">
+      <div class="clientForm__header">
+        <h1>Add New Client</h1>
+        <i id="exitCard" class="fa fa-times fa-2x"></i>
+      </div>
+      <form id="createNewClient">
+        <label for="clientName">Name:</label><br />
+        <input
+          type="text"
+          id="clientName"
+          name="clientName"
+          placeholder="John"
+          required
+        />
+        <label for="ClientTags">Tags:</label><br />
+        <input type="text" id="ClientTags" name="ClientTags" value="Doe" />
 
-  <body></body>
+        <label for="ClientDescription">Description:</label><br />
+        <textarea
+          type="text"
+          id="ClientDescription"
+          name="ClientDescription"
+          value="Doe"
+          required
+        ></textarea>
+        <label for="Assignees">Assignees:</label><br />
+        <input type="text" id="Assignees" name="Assignees" value="Doe" />
+        <input type="submit" class="formSubmit" value="Submit" />
+      </form>
+    </section>
+    <section id="editForm">
+      <div class="editForm__header">
+        <h1>Edit Client</h1>
+        <i id="editExit" class="fa fa-times fa-2x"></i>
+      </div>
+      <form id="editClient">
+        <label for="clientName">Name:</label><br />
+        <input type="text" id="editClientId" hidden />
+        <input
+          type="text"
+          id="editClientName"
+          name="clientName"
+          placeholder="John"
+          required
+        />
+        <label for="ClientTags">Tags:</label><br />
+        <input type="text" id="editClientTags" name="ClientTags" value="Doe" />
+
+        <label for="ClientDescription">Description:</label><br />
+        <textarea
+          type="text"
+          id="editClientDescription"
+          name="ClientDescription"
+          value="Doe"
+          required
+        ></textarea>
+        <label for="Assignees">Assignees:</label><br />
+        <input type="text" id="editAssignees" name="Assignees" value="Doe" />
+        <input type="submit" class="formSubmit" value="Submit" />
+      </form>
+    </section>
+    <div id="overlay"></div>
+    <section class="page-wrapper">
+      <header>
+        <div class="header__logos">
+          <img src="./images/Arup_logo.png" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Manager</a></li>
+            <li><a href="/">Client List</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h1 class="title">Client List</h1>
+
+      <section class="subnav">
+        <section id="search-bar">
+          <input
+            type="text"
+            name="search-type"
+            id="search-type"
+            placeholder="Search by name"
+          />
+          <select type="select" name="type" id="type"
+            >Filter by Type</select
+          >
+        </section>
+        <section class="AddNewClient">
+          <button type="button" id="addNewClient">Add New</button>
+        </section>
+      </section>
+      <section id="cards-data"></section>
+    </section>
+    <footer>
+      <p>© Ove Arup & Partners Ltd.</p>
+    </footer>
+  </body>
 </html>

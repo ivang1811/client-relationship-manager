@@ -1,0 +1,136 @@
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+}
+@mixin cricleCreator($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: $size / 2;
+}
+.details {
+  position: relative;
+  width: 70%;
+  float: left;
+  padding-left: 8rem;
+  padding-top: 4rem;
+  padding-right: 20rem;
+
+  .clientName {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .clientSubheading {
+    font-size: 1.2rem;
+    font-weight: 550;
+    margin-bottom: 0.5rem;
+  }
+  .descriptionText {
+    margin-bottom: 1rem;
+    color: #6b6b6b;
+    font-weight: 300;
+  }
+}
+
+.values {
+  position: relative;
+  width: 30%;
+  float: left;
+  height: 100%;
+  padding-top: 6rem;
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+  }
+  .score {
+    @include cricleCreator(2.5rem);
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    background: #00b84a;
+    border-width: 2px;
+    margin: 0.5rem 0 0 0.5rem;
+    user-select: none;
+    text-align: center;
+  }
+}
+.tags {
+  @include flexDirection(row);
+  margin-bottom: 1rem;
+  div {
+    background-color: #e2e2e2;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+.option {
+  @include flexDirection(row);
+  button {
+    background-color: #d0cdcd;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.4rem;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    &:active {
+      background-color: #808080;
+    }
+  }
+}
+.interactions {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 13rem;
+  border: 1px solid #bfb1b1;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  section {
+    margin-left: 0.7rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+  }
+}
+.interactions__row {
+  @include flexDirection(row);
+}
+.projects {
+  margin-top: 1rem;
+  height: 13rem;
+  border: 1px solid #bfb1b1;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
